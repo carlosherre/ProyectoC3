@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0.0"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+        <title>Agregar habitación</title>
+        <style>
+            html{
+                border: 0;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                display: inline;
+            }
+            
+            .cabecera{
+                position: absolute;
+                margin: 0px;
+                width: 100%;
+                height: 15%;
+                background-color: #6D836F;
+                border-bottom: 4px solid black;
+            }
+            .cabecera h1{
+                float:left;
+                font-family: 'Trocchi', 'serif';
+                font-size: 6vmax;
+                margin-top: 0.7rem;
+                margin-left: 2rem;
+            }
+            .right {
+                float: right;
+                margin-right: 2rem;
+                margin-top: 1.5rem;
+            }
+            .right img{
+                width: 5rem;
+                height: 5rem;
+            }
+            .segundo{
+                display: inline-block;
+                background-color: aqua;
+                margin-top: 7.5vw;
+                width: 100%;
+                max-height: max-content;
+            }
+            .lateral{
+                position: absolute;
+                float: left;
+                width: 30%;
+                height: 85%;
+                background-color: #75ff81;
+            }
+            .lateral img{
+                width: 80%;
+                margin: 30% 10% 5% 10%;
+                border: 5px double black; 
+            }
+            button{
+                font-family: 'Impact';
+                font-size: 30px;
+            }
+            .lateral button{
+                margin-left: 40%;
+            }
+            .formulario{
+                position: absolute;
+                float: right;
+                width: 70%;
+                height: 85%;
+                background-color: rgb(245, 245, 245);
+                margin-left: 30%;
+            }
+            .linea{
+                text-align: center;
+                margin: 30px 0;
+            }
+            .linea label{
+                font-family: 'Impact';
+                font-size: 28px;
+                margin: 50px;
+            }
+            .linea1 h2{
+                font-family: 'Impact';
+                font-size: 40px;
+            }
+            #codigo{
+                margin-right: 200px;
+            }
+            select{
+                font-size: 20px;
+                margin-right: 200px;
+            }
+            .col1,.col2,.col3{
+                display: inline-block;
+            }
+            .col2 label, .col3 label{
+                font-size: 28px;
+            }
+            .formulario input, textarea{
+                font-family: serif;
+                font-size: 20px;
+            }
+            .linea5 label, .linea5 textarea{
+                display: inline-block;
+
+            }
+            .linea5 label{
+                float:left;
+                margin-left: 20%;
+                margin-right: 10px ;
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="cabecera">
+            <h1>Swissôtel The Stamford</h1>
+            <section class="right">
+                <img width="70" height="70" src="https://image.flaticon.com/icons/png/512/17/17004.png" alt="No se pudo cargar la imagen">
+            </section> 
+        </div>
+        <div class="segundo">
+            <div class="lateral">
+                <img src="https://static.abc.es/Media/201504/27/hotel12--644x362.jpg" alt="No se pudo cargar la imagen">
+                <button>Subir fotos</button>
+            </div>
+            <form class="formulario" action="/home" method="POST" id="form">
+                <div class="linea1 linea">
+                    <h2>Agregar habitación</h2>
+                </div>
+                <div class="linea2 linea">
+                    <label for="codigo">Código</label><input type="text" name="codigo" id="codigo">
+                    <label for="numero">Número</label><input type="text" name="numero" id="numero">
+                </div>
+                <div class="linea3 linea">
+                    <label for="tipo">Tipo</label> <select name="tipo" id="tipo"><option value="default" selected>Elija una opción</option><option value="simple">Simple</option><option value="doble">Doble</option><option value="vip">VIP</option></select>
+                    <label for="precio">Precio</label><input type="text" name="precio" id="precio">
+                </div>
+                <div class="linea4 linea">
+                    <div class="col1">
+                        <label for="dispo">Disponibilidad</label>
+                    </div>
+                    <div class="col2">
+                        <label for="dispo">Inicio</label>
+                        <input type="date" name="dispo" id="dispoini" placeholder="dd/mm/aaaa">
+                    </div>
+                    <div class="col3">
+                        <label for="dispo">Fin</label>
+                        <input type="date" name="dispo" id="dispofin" placeholder="dd/mm/aaaa">
+                    </div>
+                </div>
+                <div class="linea5 linea">
+                    <label for="descrip">Descripción</label>
+                    <textarea cols="50" rows="10" id="descrip" name="descrip" placeholder="Escriba una descripción"></textarea>
+                </div>
+                <div class="linea6 linea">
+                    <button type="submit" id="agregar" name="agregar">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
