@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swissôtel The Stamford</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="/home/" class="logo"><b>Swissôtel The Stamford</b></a>
+            <nav class="navigation">
+                <ul>
+                    <img src="{{url_for('static', filename='images/login.png')}}" width="40" height="40"></img>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="box">
+                <pre><small>Cliete:</small>  <ins>        xxxxx        </ins></small> &nbsp<small>Reserva:</small>  <small><ins>        xxxxx        </ins></small></pre>
+                <table>
+                    <tr>
+                        <td><pre><small><em>Información Reserva</em></small>                                        </pre></td>
+                    </tr>
+                    <tr width="500" height="200">
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="box" style="background-color:rgb(255, 255, 255);">
+                <p>
+                    <table>
+                        <tr>
+                            <th>Califica Habitación</th>
+                        <tr>
+                            <table>
+                                <tr>
+                                    <td width="100"><per>Servicio           </per> </td>
+                                    <td>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+                                                title="Awesome - 5 stars"></label>
+                                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
+                                                title="Pretty good - 4.5 stars"></label>
+                                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+                                                title="Pretty good - 4 stars"></label>
+                                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
+                                                title="Meh - 3.5 stars"></label>
+                                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+                                                title="Meh - 3 stars"></label>
+                                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
+                                                title="Kinda bad - 2.5 stars"></label>
+                                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+                                                title="Kinda bad - 2 stars"></label>
+                                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
+                                                title="Meh - 1.5 stars"></label>
+                                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+                                                title="Sucks big time - 1 star"></label>
+                                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+                                                title="Sucks big time - 0.5 stars"></label>
+                                        </fieldset>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100">
+                                        <per>Aseo </per>
+                                    </td>
+                                    <td>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+                                                title="Awesome - 5 stars"></label>
+                                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
+                                                title="Pretty good - 4.5 stars"></label>
+                                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+                                                title="Pretty good - 4 stars"></label>
+                                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
+                                                title="Meh - 3.5 stars"></label>
+                                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+                                                title="Meh - 3 stars"></label>
+                                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
+                                                title="Kinda bad - 2.5 stars"></label>
+                                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+                                                title="Kinda bad - 2 stars"></label>
+                                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
+                                                title="Meh - 1.5 stars"></label>
+                                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+                                                title="Sucks big time - 1 star"></label>
+                                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+                                                title="Sucks big time - 0.5 stars"></label>
+                                        </fieldset>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="100">
+                                        <per>Calidad </per>
+                                    </td>
+                                    <td>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5"
+                                                title="Awesome - 5 stars"></label>
+                                            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"
+                                                title="Pretty good - 4.5 stars"></label>
+                                            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4"
+                                                title="Pretty good - 4 stars"></label>
+                                            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"
+                                                title="Meh - 3.5 stars"></label>
+                                            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3"
+                                                title="Meh - 3 stars"></label>
+                                            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"
+                                                title="Kinda bad - 2.5 stars"></label>
+                                            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2"
+                                                title="Kinda bad - 2 stars"></label>
+                                            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"
+                                                title="Meh - 1.5 stars"></label>
+                                            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1"
+                                                title="Sucks big time - 1 star"></label>
+                                            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"
+                                                title="Sucks big time - 0.5 stars"></label>
+                                        </fieldset>
+                                    </td>
+                                </tr>
+                            </table>
+                        </tr>
+                        <tr>
+                            <textarea class="message" name="message" rows="10" cols="50"> Si deseas dejanos un comentario
+                            </textarea>
+                        </tr>
+                    </table>
+                </p>
+                <div class="botons">
+                    <form method="POST" action="">
+                        <input type="submit" value="Enviar" class="boton" />
+                    </form>
+                    
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

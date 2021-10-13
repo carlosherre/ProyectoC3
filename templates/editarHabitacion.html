@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block contenido1 %}
+    <div class="f5">
+        <img style="margin-top: 20%;"  src="https://static.abc.es/Media/201504/27/hotel12--644x362.jpg" alt="No se pudo cargar la imagen" id="fotos">
+    </div>
+    <div class="f5">
+        <button style="margin-top: 15px;">Cambiar fotos</button>    
+    </div>
+{% endblock %}
+
+{% block contenido2 %}
+    <form style="width: 80%; background-color: gray; border: 5px double black; border-radius: 10px; margin: 2% 10%; height: 90%;" action="" method="update" id="formEdit">
+        <div class="f1">
+            <h2>Editar Habitación</h2>
+        </div>
+        <div class="f1">
+            <label for="codigo">Código</label> 
+            <input type="text" id="codigo" placeholder="Escriba el codigo">
+            <button>Buscar</button>
+            <hr color="black">
+        </div>
+        <div class="f1">
+            <div class="c5 left">
+                <label for="numero">Número</label>
+                <input type="text" id="numero" name="numero">
+            </div>
+            <div class="c5 right">
+                <label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio">
+            </div>
+        </div>
+        <div class="f1">
+            <label for="tipo">Tipo</label>
+            <select name="tipo" id="tipo"><option value="default" selected>Elija una opción</option><option value="simple">Simple</option><option value="doble">Doble</option><option value="vip">VIP</option></select>
+        </div>
+        <div class="f1">
+            <div class="c2">
+                <label for="dispo">Disponibilidad:</label>
+            </div>
+            <div class="c3">
+                <label style="margin-right: 0;" for="dispo">Inicio:</label>
+                <input style="width: 25%; margin-left: 0;" type="date" name="dispo" id="dispoini">
+            </div>
+            <div class="c3">
+                <label style="margin-right: 0;" for="dispo">Fin:</label>
+                <input style="width: 25%; margin-left: 0;" type="date" name="dispo" id="dispofin">
+            </div>
+        </div>
+        <div class="f2">
+            <div class="c3" style="float: left; margin-top: 3%;">
+                <label for="descrip">Descripción:</label>
+            </div>
+            <div class="c7" style="float: left;">
+                <textarea rows="4" style="margin-right: 15%; width: 80%;" aria-multiline="true" id="descrip" name="descrip"></textarea>
+            </div>
+        </div>
+        <div class="f1">
+            <button style="margin-top: 25px;" type="button" id="editar" name="editar">Guardar cambios</button>
+            <button style="margin-top: 25px;" type="button" id="eliminar" name="eliminar">Eliminar</button>
+        </div>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+
+{% block contenido1%}
+    
+{% endblock%}
+
+{% block contenido2%}
+    <form  style = " width: 60%; background-color: gray; border: 5px double black; border-radius: 10px; margin: 10% 20%; height: 70%; " action = "/login/" method = "POST" id = "registroUsuario">
+        <div  class = " f1 " >
+            <h2 > Registrar Usuario </h2 >
+        </div >
+        <div  class = " f1 " >
+            <label  for = "nombre" > Nombre </label > 
+            <input  type = "text" id = "nombre" placeholder = "Ingrese nombre" >
+        </div >
+        <div  class = " f1 " >
+            <label  for = "apellido" > Apellido </label > 
+            <input  type = "text" id = "nombre" placeholder = "Ingrese apellido" >
+        </div>
+        <div  class = " f1 " >
+            <label  for = " correo_electronico " > Correo Electrónico </label > 
+            <input  type = "email" id = "correo_electronico" placeholder = "Ingrese correo " >
+        </div>
+        <div  class = " f1 " >
+            <label  for = "contraseña" > Contraseña </label > 
+            <input  type = "password" id = "contraseña" placeholder = "Ingrese contraseña" >
+        </div>
+        <div  class = " f1 " >
+            <label  for = "contraseña2" > Verificar contraseña </label > 
+            <input  type = "password" id = "contraseña2" placeholder = "Verificar contraseña" >
+        </div>
+        <div  class = " f1 " >
+            <button  style = " margin-top: 25px; " type = "button" id = "guardar" name = "guardar" > Guardar </button >
+            <button  style = " margin-top: 25px; " type="button" id = "cancelar" name = "cancelar" > Cancelar </button >
+        </div >
+    </formulario >
+{%endblock%}

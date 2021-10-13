@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swissôtel The Stamford</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="/home/" class="logo"><b>Swissôtel The Stamford</b></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/login/">Log out</a></li>
+                    <img src="{{url_for('static', filename='images/login.png')}}" width="40" height="40"></img>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="box">
+                <table>
+                    <tr>
+                        <h1>
+                            Reservar Habitación
+                        </h1>
+                        <div class="box" style="background-color:rgb(255, 255, 255);">
+                            <p>
+                                <pre>
+<small>
+    Nombre Hab: ________________________________
+    Tipo Hab: _________________________________
+    Servicios Incluidos: ______________________
+</small>
+                </pre>
+                            </p>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+            <div class="box">
+                <h1>
+                    <br><br>
+                    <div style="text-align: center;">
+                        <img src="{{url_for('static', filename='images/Habitación.jpg')}}" width="280" height="180">
+                    </div>
+            
+                </h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box" style="background-color:rgb(255, 255, 255)";>
+                <table>
+                    <tr>
+                        <td width="400" height="10"><small>Llegada: <ins>dd/mm/aa </ins> </small></td>
+                        <td width="400" height="10"></td>
+                        <td width="200" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td width="400" height="10"><small>Salida: <ins>dd/mm/aa </ins> </small></td>
+                        <td width="400" height="10"><small>
+                            Forma de pago:
+                            <select class="control">
+                                <option value="Tipo1">Efectivo</option>
+                                <option value="Tipo2">Tarjeta Débito</option>
+                                <option value="Tipo3">Tarjeta Crédito</option>
+                                <option value="Tipo4">Transacción</option>
+                            </select>
+                        </small></td>
+                        <td width="200" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td width="400" height="10"><small>Cantidad de personas: <ins>____</ins> </small></td>
+                        <td width="400" height="10"><small>Total a pagar: $<ins>_________</ins></td>
+                        <td width="200" height="10"></td>
+                    </tr>
+                    <tr>
+                        <td width="400" height="10"><small>Precio por noche: $<ins>_________</ins></small></td>
+                        <td width="400" height="10"></td>
+                        <td width="200" height="10">
+                            <div class="botons">
+                                <form method="POST" action="">
+                                    <input type="submit" value="Reservar" class="boton" />
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

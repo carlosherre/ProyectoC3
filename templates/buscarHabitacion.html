@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swissôtel The Stamford</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+                <a href="/home/" class="logo"><b>Swissôtel The Stamford</b></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/login/">Log out</a></li>
+                    <img src="{{url_for('static', filename='images/login.png')}}" width="40" height="40"></img>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="box">
+                <h1>
+                    Buscar Habitación
+                    <br><br>
+                    <div style="text-align: center;">
+                        <img src="{{url_for('static', filename='images/Hotel.jpg')}}" width="280" height="180">
+                    </div>
+
+                </h1>
+            </div>
+            <div class="box" style="background-color:rgb(255, 255, 255);">
+                <p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Check in</th>
+                            <th>Check out</th>
+                        </tr>
+                        <tr>
+                            <td><input class="control" type="date" name="Check in" id="Check in" placeholder="dd/mm/aa"></td>
+                            <td><input class="control" type="date" name="Check out" id="Check out" placeholder="dd/mm/aa"></td>
+                        </tr>
+                        <tr>
+                            <th>Personas</th>
+                            <th>        </th>
+                        </tr>
+                        <tr>
+                            <td><input class="control" type="number" name="Adults" id="Adults" placeholder="# Adultos"></td>
+                            <td><input class="control" type="number" name="kids" id="kids" placeholder="# Niños"></td>
+                        </tr>
+                        <tr>
+                            <th>Número de habitaciónes</th>
+                            <th>                </th>
+                        </tr>
+                        <tr>
+                            <td><input class="control" type="number" name="bedrooms" id="bedrooms" placeholder="# Habitaciones"></td>
+                            <td>
+                                <select class="control">
+                                    <option value="Tipo1">Individual</option>
+                                    <option value="Tipo2">Doble</option>
+                                    <option value="Tipo3">Triple</option>
+                                    <option value="Tipo4">Quad</option>
+                                    <option value="Tipo5">Queen</option>
+                                    <option value="Tipo6">King</option>
+                                    <option value="Tipo7">Twin</option>
+                                    <option value="Tipo8">Doble-doble</option>
+                                    <option value="Tipo9">Suite</option>
+                                    <option value="Tipo10">Junior Suite</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+                <div class="botons">
+                    <form method="get" action="" target="_blank">
+                        <input type="submit" value="Buscar" class="boton" />
+                    </form>
+                </div>                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

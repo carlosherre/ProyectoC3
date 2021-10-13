@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block contenido1%}
+    
+{% endblock%}
+
+{% block contenido2%}
+    <form  style="width: 50%; height: 50%; margin: 10% 20%;" class = " formulario " action = "" método = " POST " id = "formLogin">
+        <div  class = " f1 ">
+            <h2>Ingresar Usuario</h2>
+        </div >
+        <div  class = " f1 " >
+            <div  class = " c5 ">
+                <label  for = " username " > Usuario </label> <input  type = "text" name = " username " id = " username " />
+            </div >
+        </div >
+        <div  class = " f1 ">
+            <div  class = " c5 ">
+                <label  for = " password " > Contraseña: </label > <input  type = "password" name = " password " id = " password " />
+            </div >
+        <div  class = " f2 " >
+            &nbsp;
+        </div >
+        <div  class = " f1 " >
+            <button  style = " margin-top: 10px; " type = " submit " id = " SignIn " name = " signIn " > SingIn </button >
+            <button  style = " margin-top: 10px; " type = " submit " id = " SignUp " name = " signUp " > SingUp </button>
+        </div >
+    </form>
+{%endblock%}
