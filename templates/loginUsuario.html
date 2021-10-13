@@ -1,0 +1,34 @@
+{% extiende 'base.html'%}
+
+{% block contenido1%}
+    
+    <div  class = " f5 ">
+        <img  style = " margin-top: 20%; "   src = " https://static.abc.es/Media/201504/27/hotel12--644x362.jpg " alt = " No se pudo cargar la imagen " id = " fotos " >
+    </div >
+    <div  class = " f5 " >
+        <button  style = " margin-top: 15px; " > Subir fotos </button>    
+    </div >
+{% endblock%}
+
+{% block contenido2%}
+    <formulario  class = " formulario " action = "" método = " get " id = "  ">
+        <div  class = " f1 ">
+            <h2>Ingresar Usuario</h2>
+        </div >
+        <div  class = " f1 " >
+            <div  class = " c5 ">
+                <etiqueta  para = " usuario " > Usuario </etiqueta > <input  type = " text " name = " username " id = " Username " >
+            </div >
+        </div >
+        <div  class = " f1 ">
+            <div  class = " c5 ">
+                <label  for = " contraseña " > Contraseña: </label > <input  type = " password " name = " password " id = " Password " >
+            </div >
+        <div  class = " f1 " >
+            <button  style = " margin-top: 10px; " type = " submit " id = " SingIn " name = " sing In " > Sing In </button >
+        </div >
+        <div  class = " f1 " >
+            <button  style = " margin-top: 10px; " type = " submit " id = " SingUp " name = " sing Up " > Sing Up </button>
+        </div >
+    </formulario >
+{%endblock%}
