@@ -1,29 +1,34 @@
-{% extends 'base.html'%}
+{% extiende 'base.html'%}
 
 {% block contenido1%}
     
+    <div  class = " f5 ">
+        <img  style = " margin-top: 20%; "   src = "https://tierradegracia.net/wp-content/uploads/2016/09/hotel.jpg" alt = " No se pudo cargar la imagen " id = " fotos " >
+    </div >
+    <div  class = " f5 " >
+        <button  style = " margin-top: 15px; " > Subir fotos </button>    
+    </div >
 {% endblock%}
 
 {% block contenido2%}
-    <form  style="width: 50%; height: 50%; margin: 10% 20%;" class = " formulario " action = "" método = " POST " id = "formLogin">
+    <formulario  class = " formulario " action = "" método = " get " id = "  ">
         <div  class = " f1 ">
             <h2>Ingresar Usuario</h2>
         </div >
         <div  class = " f1 " >
             <div  class = " c5 ">
-                <label  for = " username " > Usuario </label> <input  type = "text" name = " username " id = " username " />
+                <etiqueta  para = " usuario " > Username: </etiqueta > <input  type = " text " name = " username " id = " Username " >
             </div >
         </div >
         <div  class = " f1 ">
             <div  class = " c5 ">
-                <label  for = " password " > Contraseña: </label > <input  type = "password" name = " password " id = " password " />
+                <label  for = " contraseña " > Password: </label > <input  type = "password" name = "password" id = "Password" ></input>
             </div >
-        <div  class = " f2 " >
-            &nbsp;
+        <div  class = " f1 " >
+            <button  style = " margin-top: 10px; " type = " submit " id = " SingIn " name = " sing In " > Sing In </button >
         </div >
         <div  class = " f1 " >
-            <button  style = " margin-top: 10px; " type = " submit " id = " SignIn " name = " signIn " > SingIn </button >
-            <button  style = " margin-top: 10px; " type = " submit " id = " SignUp " name = " signUp " > SingUp </button>
+            <button  style = " margin-top: 10px; " type = " submit " id = " SingUp " name = " sing Up " > Sing Up </button>
         </div >
-    </form>
+    </formulario >
 {%endblock%}
