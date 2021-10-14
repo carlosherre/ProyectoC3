@@ -11,7 +11,7 @@ app.secret_key=os.urandom(24)
 @app.route('/')
 @app.route('/home/')
 @app.route('/index/')
-def base():
+def alternativas_home():
     #TODO
     return render_template('base.html')
 
