@@ -13,7 +13,7 @@ app.secret_key=os.urandom(24)
 @app.route('/index/')
 def alternativas_home():
     #TODO
-    return render_template('base.html')
+    return render_template('home.html')
 
 #================ LOGIN USUARIO ===================
 @app.route("/login/", methods=(['GET','POST']))
