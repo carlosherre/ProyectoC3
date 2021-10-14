@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilobase.css')}}">
+</head>
+{% block contenido1 %}
+    <div class="menuhome">
+        <div class="homeuno">    
+        <ul>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home">HOME</a></li>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home/habitacion">HABITACIONES</a>
+            <ul class="homedos">
+                <li><a href="#">Habitación Sencilla</a></li>
+                <li><a href="#">Habitación Doble</a></li>
+                <li><a href="#">Habitación Familiar</a></li>
+            </ul>
+        </li>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home/servicios">SERVICIOS</li>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home/ubicacion">UBICACION</li>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home/galeria">GALERIA</li>
+        <li class="has-sub"><a title="" href="http://127.0.0.1:5000/home/contacto">SERVICIO AL CLIENTE</li>
+        </ul>
+    </div>
+    </div>
+    <div>
+        <br>
+        <br>
+        <button style="margin-top: 10px;" type="submit" >RESERVAR</button>
+    </div>
+    <div class="homesocial">
+        <a href="#"><img src="{{url_for('static', filename='images/facebook.png')}}" alt="facebook"></a>
+		<a href="#"><img src="{{url_for('static', filename='images/instagram.png')}}" alt="instagram"></a>
+    </div>
+{% endblock %}
+{% block contenido2 %}
+<div class="homeimg">
+    <img src="{{url_for('static', filename='images/Promo.jpg')}}">
+</div>
+<h1>    Bienvenidos  </h1>
+<h2>     EL HOTEL Y SU HISTORIA </h2> 
+{% endblock %}

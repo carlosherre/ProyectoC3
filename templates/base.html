@@ -9,12 +9,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
         <title>{{ titulo }}</title>
         <link rel="stylesheet" href="{{url_for('static', filename='css/estilobase.css')}}">
+        <style>
+            a:visited{
+                color: black;
+            }
+        </style>
     </head>
     <body>
         <div class="ppal">
             <div class="f2 head">
-                <h1>Swissôtel The Stamford</h1>
-                <a href="/login/"> <img src="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Imagen"></a>
+                <a href="/home/" ><h1 id="titulo">Swissôtel The Stamford</h1></a>
+                <a href="/login/"> <img id="imagenLogin" src="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Imagen"></a>
             </div>
             <div class="f8 cuerpo">
                 <div class="c3 lateral">
