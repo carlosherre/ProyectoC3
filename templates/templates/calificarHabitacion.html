@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block contenido2 %}                    
+<form method="POST" action="/habitacion/calificar/">
+    <h1>Calificar Habitación</h1>
+    <div>
+        <label>Cliente:</label> <input type = "number" id = "cliente" name="cliente"  value="{{session['id']}}" readonly> <br><br>       
+        <label>Habitacion:</label> <input type = "number" id = "hab" name="hab"  value="{{session['hab']}}" readonly><br><br> 
+    </div>   
+    <small>Estrellas</small>
+    <input type="radio" id="star1" name="rating1" value="1"/>
+    <input type="radio" id="star2" name="rating1" value="2"/>
+    <input type="radio" id="star3" name="rating1" value="3"/>
+    <input type="radio" id="star4" name="rating1" value="4"/>
+    <input type="radio" id="star5" name="rating1" value="5"/>
+    <br><br>                  
+    <textarea class="message" name="message" rows="5" cols="50" placeholder="Si deseas dejanos un comentario"></textarea>
+        <div class="botons">
+            <input class="boton" type="submit" value="Enviar" class="boton" />
+        </div>
+</form>
+{% endblock %}

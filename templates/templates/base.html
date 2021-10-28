@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+        <title>{{ titulo }}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/estilobase.css')}}">
+        <script src="{{ url_for('static', filename='js/validaciones.js') }}"></script>
+        <style>
+            a:visited{
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ppal">
+            <div class="f2 head">
+                <a href="/home/" ><h1 id="titulo">Swissôtel The Stamford</h1></a>
+                <a href="/login/" style="display: inline; float: right; margin-top: 1.5%; margin-right: 5%;"><h3>{{loged}}</h3></a>
+                {% if session["nombre"] %}
+                <a href="/registro/" style="display: inline;"><img id="imagenLogin" src="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Imagen"></a>
+                {% else %}
+                <a href="/login/" style="display: inline;"><img id="imagenLogin" src="http://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Imagen"></a>
+                {% endif %}
+                
+            </div>
+            <div class="f8 cuerpo">
+                <div class="c3 lateral">
+                    {% block contenido1 %}
+                    {% endblock %}
+                </div>
+                <div class="c7 cont">
+                    {% for message in get_flashed_messages() %}
+                        {{ message }}
+                    {% endfor %}
+                    {% block contenido2 %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

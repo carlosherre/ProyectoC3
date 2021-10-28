@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block contenido1%}
+    
+{% endblock%}
+
+{% block contenido2%}
+    <form  style="width: 50%; height: 50%; margin: 10% 20%;" class = "formulario" action = "/login/" method = "POST" id = "formLogin" name = "formLogin">
+        <div  class = "f1">
+            <h2>Ingresar Usuario</h2>
+        </div >
+        <div  class = "f1" >
+            <div  class = "c5">
+                <label  for = "username" > Usuario </label> 
+                <input  type = "text" name = "username" id = "username" />
+            </div >
+        </div >
+        <div  class = "f1">
+            <div  class = "c5">
+                <label  for = "password" > Contraseña: </label > 
+                <input  type = "password" name = "password" id = "password" />
+            </div >
+        <div  class = "f2" >
+            &nbsp;
+        </div >
+        <div  class = "f1" >
+            <button onclick="loginUsuario()" style = " margin-top: 10px; " type = "submit" id = "SignIn" name = "signIn" > Sing In </button >
+            <a href="/registro/"><button  style = " margin-top: 10px; " type = "button" id = "SignUp" name = "signUp" > Sing Up </button></a>
+        </div >
+    </form>
+    <!-- <script type="text/javascript">
+    $(document).ready(function()
+    {
+        $('.message a').click(function()
+        {
+            $('form').animate({height: "toggle", opacity: "toggle"},"slow");
+            $('#idMensajeError').hide();
+        });
+    });
+    </script>
+      {%with messages = get_flashed_messages(with_categories=true)%}
+        {%if messages%}
+            {%for category, message in messages%}
+            <div class="alert {{category}}" id="idMensajeError">
+              {{message}}
+            </div>
+            {%endfor%}
+        {%endif%}
+      {%endwith%} -->
+
+{%endblock%}

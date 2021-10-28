@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilobase.css')}}">
+</head>
+{% block contenido1 %}
+    <div class="menuhome">
+        <div class="homeuno">    
+            <ul>
+                <li class="has-sub"><a title="" href="/home">HOME</a></li>
+                <li class="has-sub"><a title="" href="/home/habitacion/buscar">HABITACIONES</a></li>
+                <li class="has-sub"><a title="" href="https://www.google.com/maps/place/Swiss%C3%B4tel+The+Stamford/@1.2932771,103.8535076,15z/data=!4m8!3m7!1s0x0:0xf32fa2fffc1d7b8c!5m2!4m1!1i2!8m2!3d1.2932771!4d103.8535076">UBICACION</li>
+                {% if session["adm"]==1 %}
+                <li class="has-sub"><a title="" href="/dashboard/">DASHBOARD</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+    <div>
+        <br>
+        <br>
+    </div>
+    <div class="homesocial">
+        <a href="https://www.facebook.com/SwissotelTheStamford/"><img src="{{url_for('static', filename='images/facebook.png')}}" alt="facebook"></a>
+		<a href="https://www.instagram.com/swissotelthestamford/"><img src="{{url_for('static', filename='images/instagram.png')}}" alt="instagram"></a>
+    </div>
+{% endblock %}
+{% block contenido2 %}
+{% if session["nombre"] %}
+<h1>Bienvenido {{session["nombre"]}}</h1>
+{% else %}
+<h1>Bienvenidos</h1>
+{% endif %}
+<h2>EL HOTEL Y SU HISTORIA</h2> 
+<div class="homeimg">
+    <img src="{{url_for('static', filename='images/Promo.jpg')}}">
+</div>
+{% endblock %}

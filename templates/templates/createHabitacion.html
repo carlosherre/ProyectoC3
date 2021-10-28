@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block contenido1 %}
+    
+    <div class="f5">
+        <img style="margin-top: 20%;"  src="https://static.abc.es/Media/201504/27/hotel12--644x362.jpg" alt="No se pudo cargar la imagen" id="fotos">
+    </div>
+    <div class="f5">
+        <button style="margin-top: 15px;">Subir fotos</button>    
+    </div>
+{% endblock %}
+
+{% block contenido2 %}
+    <form class="formulario" onsubmit="return validar_habitacion()" action="{{ url_for('agregarHabitacion')}}" method="POST" id="formCreate" name="formCreate">
+        <div class="f1">
+            <h2>Agregar habitación</h2>
+        </div>
+        <div class="f1">
+            <div class="c5">
+                <label for="numero">Número:</label><input type="number" name="numero" id="numero">
+            </div>
+        </div>
+        <div class="f1">
+            <div class="c5">
+                <label for="tipo">Tipo:</label> <select name="tipo" id="tipo"><option value="default" selected>Elija una opción</option><option value="simple">Simple</option><option value="doble">Doble</option><option value="vip">VIP</option></select>
+            </div>
+            <div class="c5">
+                <label for="precio">Precio:</label><input type="number" name="precio" id="precio">
+            </div>
+        </div>
+        <div class="f1">
+            <div class="c2">
+                <label for="dispo">Disponibilidad:</label><input type="text" name="dispo">
+            </div>
+            <div class="c4">
+                <label for="dispoini">Inicio:</label>
+                <input style="margin-left: 0; width: 25%;" type="date" name="dispoini" id="dispoini" placeholder="DD/MM/AAAA">
+            </div>
+            <div class="c4">
+                <label for="dispofin">Fin:</label>
+                <input style="margin-left: 0; width: 25%;" type="date" name="dispofin" id="dispofin" placeholder="DD/MM/AAAA">
+            </div>
+        </div>
+        <div class="f3">
+            <div class="c3" style="float: left; margin-top: 3%;">
+                <label for="descrip">Descripción:</label>
+            </div>
+            <div class="c7" style="float: left;">
+                <textarea rows="5" style="margin-right: 15%; width: 80%;" aria-multiline="true" id="descrip" name="descrip" placeholder="Escriba una descripción (Opcional)"></textarea>
+            </div>
+        </div>
+        <div class="f1">
+            <button style="margin-top: 10px;" type="submit" id="agregar" name="agregar">Agregar</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swissôtel The Stamford</title>
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+                <a href="/home/" class="logo"><b>Swissôtel The Stamford</b></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/login/">Log out</a></li>
+                    <img src="{{url_for('static', filename='images/log out.png')}}" width="40" height="40"></img>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="box">
+                <h1>
+                    Buscar Habitación
+                    <br><br>
+                    <div style="text-align: center;">
+                        <img src="{{url_for('static', filename='images/Hotel.jpg')}}" width="280" height="180">
+                    </div>
+
+                </h1>
+            </div>
+            
+            <div class="box" style="background-color:rgb(255, 255, 255);">
+                <form name="busquedahabitacion" id="busquedahabitacion" method="GET" action="/habitacion/buscar/" onsubmit="return buscarHabitacion()">
+                            <table>
+                                <tr >
+                                    <th colspan="2" style="text-align: center;">
+                                        <label for="tipo">Tipo de habitación</label>
+                                    </th>
+                                </tr>
+                                <td colspan="2" style="text-align: center;">
+                                    <select class="control" id="tipo" name="tipo" form="busquedahabitacion">
+                                        <option value="default" selected>Tipo</option>
+                                        <option value="simple">Simple (1 Pers)</option>
+                                        <option value="doble">Doble (2 Pers)</option>
+                                        <option value="vip">VIP (+3 Pers)</option>
+                                    </select>
+                                    <div class="botons">
+                                        <button form="busquedahabitacion" type="submit" formmethod="POST" id="buscar" name="buscar" class="boton">Buscar</button>
+                                    </div> 
+                                </td>
+                            </tr>
+                                <tr>
+                                    <th>Check in</th>
+                                    <th>Check out</th>
+                                </tr>
+                                <tr>
+                                    <td><input class="control" type="date" name="Checkin" id="Checkin" placeholder="dd/mm/aa" form="busquedahabitacion"></td>
+                                    <td><input class="control" type="date" name="Checkout" id="Checkout" placeholder="dd/mm/aa" form="busquedahabitacion"></td>
+                                </tr>
+                        </table>
+                        <div class="box" style="width: 40%;">
+                            <select name="mostrar" id="mostrar">
+                                <option value="default">Habitaciones Encontradas</option>
+                                {% for message in get_flashed_messages() %}
+                                <option value="{{message}}">{{ message }}</option> 
+                                {% endfor %}
+                            </select>
+                            <button formmethod="POST" formaction="/habitacion/reservar/" class="boton" name="reservar", id="reservar" type="submit">Reservar</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    {% if session["adm"]==1 %}
+    <div style="text-align: center;">
+        <a href="/habitacion/agregar/"><button class="boton">Agregar Habitacion</button></a>
+        <a href="/habitacion/editar/"><button class="boton">Editar Habitacion</button></a>
+    </div>
+    {% elif session["adm"]==2 %}
+    <div style="text-align: center;">
+        <a href="/habitacion/agregar/"><button class="boton">Agregar Habitacion</button></a>
+    </div>
+    {% endif %}
+</body>
+</html>
