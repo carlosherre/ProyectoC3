@@ -1,0 +1,197 @@
+body{
+    font-family: Trocchi;
+    color: #333;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    margin: 3;
+    background: #D1FFD2;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+p {
+    margin-bottom: 1.6em;
+    font-family: 'Trocchi';
+}
+
+.container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #6D836F;
+    color: black;
+    padding: 1.2rem 0;
+    position: fixed;
+    left: 0.5rem;
+    top: 0;
+    right: 0.5rem;
+}
+
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    letter-spacing: 6px;
+    font-size: 2rem;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transform: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background: rgb(85, 102, 87);
+}
+
+.main {
+    padding-top: 6rem;
+    padding-left: 0; 
+}
+
+.box {
+    display: table-cell;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box:nth-child(1) pre {
+    font-family: 'Trocchi';
+}
+
+.box:nth-child(1) table{
+    background: white;
+    border-radius: 10px;
+}
+
+.box:nth-child(1) h1{
+    background: #D1FFD2;
+    text-align: center;
+    font-family: 'Trocchi';
+    margin-bottom: 15px; 
+}
+
+.box:nth-child(2) p{
+    background: #FFFFFF;
+    text-align: left;
+    font-family: 'Trocchi';
+    margin-bottom: 15px; 
+}
+
+.box:nth-child(2) textarea{
+    background: #D1FFD2;
+    border-radius: 10px;
+    border: none;
+    color: rgb(168, 168, 177);
+}
+
+.botons {
+    height: 40px;
+    text-align: center;
+    font-size: 1px;
+    line-height: 60px;
+}
+
+.boton {
+    background: rgb(44, 233, 48);
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+    border: 1px solid rgb(44, 233, 48);
+    box-shadow: 5px 5px 5px #999;
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    text-align: right;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solido #1f53c5;
+    font-family: 'Impact';
+    font-size: 18px;
+    color:white;
+}
+
+.footer {
+    background: #D1FFD2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label {
+margin: 0;
+padding: 0;
+}
+
+.rating {
+border: none;
+float: left;
+}
+
+.rating > input {
+display: none;
+}
+
+.rating > label:before {
+margin: 5px;
+font-size: 1.25em;
+font-family: FontAwesome;
+display: inline-block;
+content: "\f005";
+}
+
+.rating > .half:before {
+content: "\f089";
+position: absolute;
+}
+
+.rating > label {
+color: #ddd;
+float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+color: #FFD700;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+color: #FFED85;
+}
